@@ -1,0 +1,7 @@
+{
+  "name": "repwise-landing-page",
+  "private": true,
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  }
+}
