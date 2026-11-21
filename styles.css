@@ -160,3 +160,27 @@ details p{color:var(--ink-2);margin-top:10px}
 .lede.small{font-size:16px;margin-top:24px}
 @media (max-width:900px){.feat-copy{padding-top:0}.ladder2{grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}.muscles img{width:64px;height:64px}}
 @media (max-width:480px){.ladder2{grid-template-columns:repeat(5,minmax(0,1fr))}.muscles img{width:56px;height:56px}}
+
+/* numbers: TDEE / calories / protein + calculator */
+.numbers{padding:24px 0 96px}.numbers .sub,.reqs .sub{font-size:18px;color:var(--ink-2);margin-top:10px;max-width:640px}
+.num-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.num-card{background:var(--surface);border-radius:var(--r);padding:24px;box-shadow:0 1px 2px #15151f0d,0 10px 30px #15151f0a}
+.num-ic{font-size:30px}.num-card h3{font-size:21px;margin-top:10px}.num-card p{color:var(--ink-2);margin-top:8px}.num-card b{color:var(--ink)}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:24px;background:var(--surface);border-radius:var(--r);overflow:hidden;box-shadow:0 1px 2px #15151f0d,0 10px 30px #15151f0a}
+.calc-in{padding:24px;display:grid;gap:12px}.calc-t{font-size:18px}.calc-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.calc label{display:grid;gap:4px;font-size:13px;font-weight:600;color:var(--ink-2)}
+.calc input,.calc select{font:inherit;font-size:16px;font-weight:600;color:var(--ink);border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff;width:100%}
+.calc input:focus,.calc select:focus{outline:none;border-color:var(--ink)}
+.calc-out{background:var(--ink);color:#fff;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start}
+.calc-out div{background:#ffffff10;border-radius:14px;padding:14px}.calc-out div.hi{background:var(--accent)}
+.calc-out small{display:block;font-size:12px;color:#ffffffb0;font-weight:600}.calc-out b{display:block;font-size:30px;font-weight:900;letter-spacing:-.02em;font-variant-numeric:tabular-nums}.calc-out span{font-size:12px;color:#ffffffb0}
+.calc-note{grid-column:1/-1;font-size:13px;color:#ffffff99}
+/* requirements (for fun) */
+.reqs{padding:0 0 88px}
+.req-box{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:24px;border-radius:var(--r);overflow:hidden;background:#0f0f16;color:#e7e7ee;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;box-shadow:0 20px 50px #15151f33}
+.req-col{padding:24px}.req-col.rec{background:#17171f;border-left:1px solid #ffffff14}
+.req-col h3{font-family:Inter,system-ui,sans-serif;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:#ff8a8f}
+.req-col dl{margin-top:12px;display:grid;grid-template-columns:auto 1fr;gap:10px 16px;font-size:14px}.req-col dt{color:#8b8b98}.req-col dd{margin:0}
+.req-fine{margin-top:14px;font-size:14px;color:var(--ink-3);text-align:center}
+@media (max-width:900px){.num-grid{grid-template-columns:1fr}.calc{grid-template-columns:1fr}.req-box{grid-template-columns:1fr}.req-col.rec{border-left:none;border-top:1px solid #ffffff14}}
+@media (max-width:480px){.calc-out b{font-size:24px}}
