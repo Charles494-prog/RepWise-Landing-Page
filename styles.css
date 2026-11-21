@@ -134,3 +134,17 @@ details p{color:var(--ink-2);margin-top:10px}
   .hero-phones{height:400px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.dl-btn{transition:none}}
+
+/* why + shout-out */
+.why{padding:24px 0 96px}
+.why-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:start}
+.why-note .big{font-size:clamp(18px,2vw,21px);color:var(--ink-2);margin-top:16px;max-width:600px}
+.why-note a{color:var(--accent);font-weight:700}
+.sig{margin-top:28px;padding-left:16px;border-left:3px solid var(--accent);display:flex;flex-direction:column}
+.sig b{font-size:18px}.sig span{font-size:14px;color:var(--ink-3)}
+.shout{background:var(--ink);color:#fff;border-radius:var(--r);padding:28px;box-shadow:0 20px 50px #15151f33;position:relative;overflow:hidden}
+.shout::after{content:"";position:absolute;right:-80px;top:-80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(closest-side,#e3262f55,transparent)}
+.shout .tag{background:#ffffff1a;color:#ff8a8f}
+.shout h3{font-size:24px}
+.shout p{color:#c9c9d3;margin-top:12px}.shout b{color:#fff}
+@media (max-width:900px){.why-grid{grid-template-columns:1fr}}
