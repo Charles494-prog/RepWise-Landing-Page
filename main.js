@@ -33,7 +33,18 @@
     const f = n => Math.round(n).toLocaleString();
     $c('o-tdee').textContent = f(tdee); $c('o-kcal').textContent = f(Math.max(1200, kcal)); $c('o-p').textContent = f(w * (goal === 'bulk' ? 1.8 : 2));
     $c('o-w').textContent = (Math.round(w * 35 / 250) * 250 / 1000).toFixed(1);
+    // Body fat — same as the app: US Navy tape method when waist + neck (+ hips for women) are given, else BMI estimate adjusted for build.
+    const waist = +$c('c-waist').value, neck = +$c('c-neck').value, hip = +$c('c-hip').value, l = Math.log10;
+    $c('c-hip-l').hidden = sex === 'm';
+    let bf = null, how = 'estimated from BMI, age, sex & build';
+    if (waist > neck && neck > 0 && (sex === 'm' || hip > 0)) {
+      bf = sex === 'm' ? 495 / (1.0324 - 0.19077 * l(waist - neck) + 0.15456 * l(h)) - 450 : 495 / (1.29579 - 0.35004 * l(waist + hip - neck) + 0.221 * l(h)) - 450;
+      how = 'measured — US Navy tape method (±3%)';
+      if (!(bf >= 3 && bf <= 65)) { bf = null; how = 'those measurements don’t add up — showing the estimate'; }
+    }
+    if (bf === null) bf = Math.max(4, 1.2 * (w / Math.pow(h / 100, 2)) + 0.23 * age - 10.8 * (sex === 'm' ? 1 : 0) - 5.4 + ({ lean: -4, athletic: -2, average: 0, soft: 3, heavy: 6 })[$c('c-build').value]);
+    $c('o-bf').textContent = bf.toFixed(1) + '%'; $c('o-bfm').textContent = how;
   }
-  ['c-sex', 'c-age', 'c-h', 'c-w', 'c-act', 'c-goal'].forEach(id => { const el = $c(id); if (el) { el.addEventListener('input', calc); el.addEventListener('change', calc); } });
+  ['c-sex', 'c-age', 'c-h', 'c-w', 'c-act', 'c-goal', 'c-build', 'c-waist', 'c-neck', 'c-hip'].forEach(id => { const el = $c(id); if (el) { el.addEventListener('input', calc); el.addEventListener('change', calc); } });
   if ($c('calc')) calc();
 })();

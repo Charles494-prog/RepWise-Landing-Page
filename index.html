@@ -150,6 +150,14 @@
             <label>Weight (kg)<input id="c-w" type="number" inputmode="decimal" value="75" min="30" max="250"></label>
           </div>
           <label>How active are you?<select id="c-act"><option value="1.2">Not active — desk job</option><option value="1.375" selected>Lightly active — 1–3 workouts a week</option><option value="1.55">Active — 3–5 workouts a week</option><option value="1.725">Very active — 6–7 workouts a week</option></select></label>
+          <label>Build<select id="c-build"><option value="lean">Lean — visible abs</option><option value="athletic">Athletic</option><option value="average" selected>Average</option><option value="soft">A bit soft</option><option value="heavy">Heavy</option></select></label>
+          <details class="calc-tape"><summary>Have a tape measure? <span>Measure body fat instead (optional)</span></summary>
+            <div class="calc-row3">
+              <label>Waist (cm)<input id="c-waist" type="number" inputmode="decimal" placeholder="at navel" min="40" max="200"></label>
+              <label>Neck (cm)<input id="c-neck" type="number" inputmode="decimal" placeholder="below Adam's apple" min="20" max="70"></label>
+              <label id="c-hip-l">Hips (cm)<input id="c-hip" type="number" inputmode="decimal" placeholder="widest point" min="50" max="200"></label>
+            </div>
+          </details>
           <label>Goal<select id="c-goal"><option value="cut">Lose fat (−500 kcal)</option><option value="maintain">Stay the same</option><option value="bulk">Build muscle (+300 kcal)</option></select></label>
         </div>
         <div class="calc-out">
@@ -157,6 +165,7 @@
           <div class="hi"><small>Eat about</small><b id="o-kcal">—</b><span>kcal a day</span></div>
           <div><small>Protein</small><b id="o-p">—</b><span>g a day</span></div>
           <div><small>Water</small><b id="o-w">—</b><span>litres a day</span></div>
+          <div class="bf"><small>Body fat</small><b id="o-bf">—</b><span id="o-bfm">estimated from BMI, age, sex &amp; build</span></div>
           <p class="calc-note">A starting estimate. In the app it adjusts every time you log your weight.</p>
         </div>
       </div>

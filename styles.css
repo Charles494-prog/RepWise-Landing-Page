@@ -195,3 +195,11 @@ details p{color:var(--ink-2);margin-top:10px}
 @media (max-width:480px){.calc-out b{font-size:24px}}
 
 .rq-ic svg,.num-ic svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* calculator: body fat */
+.calc-out div.bf{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}.calc-out div.bf small{width:100%}
+.calc-tape{border:1.5px dashed var(--line);border-radius:12px;padding:10px 12px}
+.calc-tape summary{cursor:pointer;font-size:14px;font-weight:700;color:var(--ink)}.calc-tape summary span{font-weight:500;color:var(--ink-3);margin-left:4px}
+.calc-row3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.calc-row3 input::placeholder{font-size:12px;font-weight:500}
+@media (max-width:480px){.calc-row3{grid-template-columns:1fr}}
