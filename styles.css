@@ -199,7 +199,7 @@ details p{color:var(--ink-2);margin-top:10px}
 /* calculator: body fat */
 .calc-out div.bf{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}.calc-out div.bf small{width:100%}
 .calc-tape{border:1.5px dashed var(--line);border-radius:12px;padding:10px 12px}
-.calc-tape summary{cursor:pointer;font-size:14px;font-weight:700;color:var(--ink)}.calc-tape summary span{font-weight:500;color:var(--ink-3);margin-left:4px}
+.calc-tape summary{cursor:pointer;font-size:14px;font-weight:700;color:var(--ink);display:grid;grid-template-columns:1fr auto;align-items:center;gap:0 12px}.calc-tape summary span{grid-row:2;font-size:13px;font-weight:500;color:var(--ink-3)}.calc-tape summary::after{grid-column:2;grid-row:1/3}
 .calc-row3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
 .calc-row3 input::placeholder{font-size:12px;font-weight:500}
 @media (max-width:480px){.calc-row3{grid-template-columns:1fr}}
