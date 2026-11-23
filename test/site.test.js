@@ -141,4 +141,8 @@ test('new features are highlighted: menu link, "New in RepWise" cards linking to
   for (const id of ['f-reschedule', 'f-balance', 'f-custom', 'f-meals']) assert.ok(html.includes(`id="${id}"`), id);
   for (const img of ['reschedule', 'swap', 'balance', 'exercise', 'meal', 'nutrition']) assert.ok(html.includes(`/assets/screens/${img}.png`), img);
   assert.ok(html.includes('alt="Forearms"')); assert.match(html, /12 ranks to climb at once/);
+  // latest: today's focus, Ultra-Health, smarter fasting, rank themes
+  for (const s of ["Today's focus", 'Ultra-Health Mode', 'Smarter fasting', 'Rank themes']) assert.ok(sec.includes(`<h3>${s}</h3>`), s);
+  for (const id of ['f-focus', 'f-ultra', 'f-fasting', 'f-themes']) { assert.ok(html.includes(`id="${id}"`), id); assert.ok(sec.includes(`href="#${id}"`), id); }
+  for (const img of ['focus', 'ultra', 'ultra-nutrition', 'ultra-fast', 'themes', 'rank-gallery']) assert.ok(html.includes(`/assets/screens/${img}.png`), img);
 });
