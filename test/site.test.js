@@ -158,4 +158,5 @@ test('Ultra-Health Mode is highlighted: menu link, hero pill, spotlight section 
   for (const img of ['ultra', 'ultra-fast']) assert.ok(sec.includes(`/assets/screens/${img}.png`), img);
   const grid = html.slice(html.indexOf('class="new-grid"'));
   assert.ok(grid.indexOf('href="#f-ultra"') < grid.indexOf('href="#f-focus"'), 'Ultra-Health is the first New card');
+  assert.doesNotMatch(sec, /\p{Extended_Pictographic}/u, 'icons are SVGs, not emoji');
 });
