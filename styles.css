@@ -54,6 +54,16 @@ h3{font-size:clamp(22px,2.6vw,30px);font-weight:800}
 
 /* features */
 .features{padding:96px 0 40px}
+.whatsnew{padding:88px 0 8px}
+.whatsnew .sub{font-size:18px;color:var(--ink-2);margin-top:10px;max-width:720px}
+.new-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:36px}
+.new-card{display:block;background:var(--surface);border-radius:var(--r);padding:24px;color:var(--ink);text-decoration:none;box-shadow:0 1px 2px #15151f0d,0 10px 30px #15151f0a;position:relative;transition:transform .15s,box-shadow .15s}
+.new-card:hover{transform:translateY(-2px);box-shadow:0 2px 4px #15151f12,0 16px 40px #15151f14}
+.new-card::after{content:"NEW";position:absolute;top:18px;right:18px;font-size:11px;font-weight:800;letter-spacing:.08em;color:#fff;background:var(--accent);border-radius:999px;padding:3px 9px}
+.new-card h3{font-size:19px;margin-top:14px}.new-card p{color:var(--ink-2);margin-top:6px;font-size:15px}
+.new-ic{display:inline-flex;width:44px;height:44px;border-radius:12px;background:#fdeced;align-items:center;justify-content:center}
+.new-ic svg{width:24px;height:24px;fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.phone-pair{display:flex;gap:16px;align-items:flex-start}.phone-pair .phone{width:240px}.phone-pair .phone:last-child{margin-top:48px}
 .feat{display:grid;grid-template-columns:1fr auto;gap:64px;align-items:start;margin-top:72px}
 .feat-copy{padding-top:56px}
 .features .sub{font-size:18px;color:var(--ink-2);margin-top:10px}
@@ -125,6 +135,8 @@ details p{color:var(--ink-2);margin-top:10px}
   .feat,.feat.rev{grid-template-columns:1fr;gap:36px;margin-top:72px}
   .feat.rev .feat-copy{order:0}
   .feat .phone{margin:0 auto;width:260px}
+  .new-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .phone-pair{justify-content:center}.phone-pair .phone{width:44vw;max-width:240px;margin:0}.phone-pair .phone:last-child{margin-top:32px}
   .priv-grid{grid-template-columns:1fr}
 }
 @media (max-width:480px){
@@ -193,6 +205,7 @@ details p{color:var(--ink-2);margin-top:10px}
 .req-fine{margin-top:14px;font-size:14px;color:var(--ink-3);text-align:center}
 @media (max-width:900px){.num-grid{grid-template-columns:1fr}.calc{grid-template-columns:1fr}.req-g ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:480px){.calc-out b{font-size:24px}}
+@media (max-width:560px){.new-grid{grid-template-columns:1fr}}
 
 .rq-ic svg,.num-ic svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 

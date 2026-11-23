@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>RepWise — Be Wise in Every Rep</title>
-<meta name="description" content="RepWise is a free gym app that builds your training plan around your schedule, ranks you up from Iron to Arnold, and tracks food, fasting and progress. No account, works offline.">
+<meta name="description" content="RepWise is a free gym app that builds your training plan around your schedule, reschedules your week when life gets in the way, ranks you up from Iron to Arnold, and tracks food, fasting and progress. No account, works offline.">
 <meta name="theme-color" content="#15151f">
 <meta name="author" content="Charles Andrei Galvan">
 <meta property="og:title" content="RepWise — Be Wise in Every Rep">
@@ -24,6 +24,7 @@
 <header class="nav">
   <a class="brand" href="#top" aria-label="RepWise home"><img src="/assets/logo.png" alt="" width="36" height="36"><span>RepWise</span></a>
   <nav aria-label="Sections">
+    <a href="#new">New</a>
     <a href="#features">Features</a>
     <a href="#numbers">Calories</a>
     <a href="#requirements">Requirements</a>
@@ -63,8 +64,25 @@
       <li><b>100%</b><span>free, no ads</span></li>
       <li><b>0</b><span>data collected</span></li>
       <li><b>0</b><span>hidden pro plans</span></li>
-      <li><b>50+</b><span>Filipino dishes</span></li>
+      <li><b>80+</b><span>Filipino dishes</span></li>
     </ul>
+  </section>
+
+  <!-- WHAT'S NEW -->
+  <section class="whatsnew" id="new">
+    <div class="wrap">
+      <p class="eyebrow dark">New in RepWise</p>
+      <h2>Your week bends. Your plan bends with it.</h2>
+      <p class="sub">Can't make it to the gym? Train what you can at home and RepWise rebuilds the rest of your week around the muscles you actually trained.</p>
+      <div class="new-grid">
+        <a class="new-card" href="#f-reschedule"><span class="new-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h18M8 3v4M16 3v4"/><rect x="3" y="5" width="18" height="16" rx="2"/><path d="m9 15 2 2 4-4"/></svg></span><h3>Smart rescheduling</h3><p>Swap today for anything. Sessions you already covered are skipped, the one you missed moves to the next day that respects recovery — with Undo.</p></a>
+        <a class="new-card" href="#f-balance"><span class="new-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></svg></span><h3>Muscle balance</h3><p>“You’ve trained biceps 3 times this week. Are you sure?” Plus what you still haven’t trained. Warnings, never blocks.</p></a>
+        <a class="new-card" href="#f-custom"><span class="new-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 20c-2-1-3-4-2-7l2-5c1-2 3-3 5-2l1 1-2 3 3 1c3 1 5 4 4 7-1 2-3 3-6 3z"/></svg></span><h3>Custom exercises</h3><p>Add any exercise and pick exactly what it trains — down to the triceps long head — as primary or secondary.</p></a>
+        <a class="new-card" href="#f-custom"><span class="new-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5z"/><path d="m2 13 10 5 10-5"/></svg></span><h3>Exercise groups</h3><p>Save “Home Arms Day” once, then start it, add it to a workout, or swap it in for today.</p></a>
+        <a class="new-card" href="#f-meals"><span class="new-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/></svg></span><h3>Dishes &amp; meals</h3><p>Adobo is a dish. “My breakfast” = adobo + rice + whey is a meal. Log it in one tap, servings adjustable.</p></a>
+        <a class="new-card" href="#features"><span class="new-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 3-6.2"/><path d="M4 4v4h4"/></svg></span><h3>Real loop routes</h3><p>Route suggestions are true loops — no more running into an alley and back out. Planned online, followed on GPS.</p></a>
+      </div>
+    </div>
   </section>
 
   <!-- FEATURES -->
@@ -72,15 +90,55 @@
     <div class="wrap">
       <p class="eyebrow dark">What's inside</p>
       <h2>Train, run, eat and track — in one free app.</h2>
-      <p class="sub">Five things RepWise does for you, every day.</p>
+      <p class="sub">Everything RepWise does for you, every day — new features first.</p>
     </div>
+
+    <article class="wrap feat" id="f-reschedule">
+      <div class="feat-copy">
+        <span class="tag">New · Smart week</span>
+        <h3>Missed leg day? Your week fixes itself.</h3>
+        <p>Plates at home too light for legs but fine for arms? Pick what you can do today. RepWise tracks the muscles you <b>actually</b> trained, covers the arm session you had planned for Thursday, and moves legs to the next day that gives your muscles ~48 hours to recover.</p>
+        <ul class="ticks"><li>Shows exactly what changed — “Legs moved Mon → Wednesday”</li><li>Undo any change, or move sessions yourself in the week editor</li><li>Missed days move automatically; if nothing fits, it asks you</li><li>Recovery time is yours to set (24–96 h)</li></ul>
+      </div>
+      <div class="phone-pair"><figure class="phone"><img src="/assets/screens/swap.png" alt="RepWise sheet previewing how the week changes if you do Home Arms Day instead of Leg Day" width="390" height="844" loading="lazy"></figure><figure class="phone"><img src="/assets/screens/reschedule.png" alt="RepWise workout summary with a Plan updated card: legs moved to Wednesday, Thursday's arm session covered, with Undo" width="390" height="844" loading="lazy"></figure></div>
+    </article>
+
+    <article class="wrap feat rev" id="f-balance">
+      <div class="feat-copy">
+        <span class="tag">New · Muscle balance</span>
+        <h3>A friendly nudge before you overdo it</h3>
+        <p>RepWise counts sessions and hard sets for every muscle each week. Start a workout that hits a muscle you've already trained a lot and it asks first — and reminds you what you haven't trained yet.</p>
+        <ul class="ticks"><li>About 2 sessions and 10–20 hard sets per muscle a week — research-backed defaults</li><li>Limits you can change in Settings</li><li>Only warnings: you can always train anyway</li></ul>
+      </div>
+      <figure class="phone"><img src="/assets/screens/balance.png" alt="RepWise warning: You've trained biceps 3 times this week. Are you sure? with the muscles not trained yet" width="390" height="844" loading="lazy"></figure>
+    </article>
+
+    <article class="wrap feat" id="f-custom">
+      <div class="feat-copy">
+        <span class="tag">New · Your exercises</span>
+        <h3>Exercises and groups that are yours</h3>
+        <p>Not in the list? Create it and choose what it trains — the whole muscle or a specific head — as primary or secondary. It counts everywhere: workouts, history, ranks, balance and rescheduling. Then bundle exercises into groups like “Home Arms Day”.</p>
+        <ul class="ticks"><li>Sub-muscles: triceps long / lateral / medial head, front / side / rear delts and more</li><li>Rename or delete any time — your history stays</li><li>Forearms is now its own ranked muscle</li></ul>
+      </div>
+      <figure class="phone"><img src="/assets/screens/exercise.png" alt="RepWise custom exercise editor with triceps long head as primary and forearms as secondary" width="390" height="844" loading="lazy"></figure>
+    </article>
+
+    <article class="wrap feat rev" id="f-meals">
+      <div class="feat-copy">
+        <span class="tag">New · Dishes &amp; meals</span>
+        <h3>Ingredient, dish, meal — log it the way you eat</h3>
+        <p>A dish is a recipe, like your adobo with soy sauce, sugar and chicken. A meal is what you eat together — “My breakfast” = adobo + rice + whey. Open it, adjust any item's servings, and log the whole thing in one tap.</p>
+        <ul class="ticks"><li>Meals mix catalogue dishes, your dishes and single foods</li><li>Logged food is front and centre; meal ideas tuck into a small chip</li><li>One clear Log button, plus a plate for building bigger meals</li></ul>
+      </div>
+      <div class="phone-pair"><figure class="phone"><img src="/assets/screens/meal.png" alt="RepWise saved meal My breakfast with chicken adobo, rice and whey, each with a servings stepper and a Log meal button" width="390" height="844" loading="lazy"></figure><figure class="phone"><img src="/assets/screens/nutrition.png" alt="RepWise nutrition screen with the calorie ring, macros and the logged foods list" width="390" height="844" loading="lazy"></figure></div>
+    </article>
 
     <article class="wrap feat">
       <div class="feat-copy">
         <span class="tag">1 · Your plan</span>
         <h3>A program built around your week</h3>
         <p>Tell RepWise how many days you can train, which days are off-limits, how long a session can be and what equipment you have. It picks the split — Full Body, Upper / Lower, PPL and more — and lays out your week.</p>
-        <ul class="ticks"><li>Schedules around work, class and family days</li><li>Gym, dumbbells or bodyweight only</li><li>Missed a day? Make it up within 2 days</li></ul>
+        <ul class="ticks"><li>Schedules around work, class and family days</li><li>Gym, dumbbells or bodyweight only</li><li>Missed a day? It moves to the next day that fits</li></ul>
       </div>
       <figure class="phone"><img src="/assets/screens/plan.png" alt="RepWise plan screen showing a 5-day split laid out Monday to Sunday" width="390" height="844"></figure>
     </article>
@@ -100,7 +158,7 @@
         <span class="tag">3 · Cardio</span>
         <h3>Runs and walks on a live map</h3>
         <p>A full-screen map follows you while you run, with your distance, time and pace below. Pick a goal — 5 km or 30 minutes — and a run : walk format like 1:1 or 3:1, and RepWise buzzes and tells you when to switch.</p>
-        <ul class="ticks"><li>Replay any run on the map afterwards</li><li>Automatic steps all day, with week / month / year totals</li><li>Optional route suggestions for loops and one-way runs</li></ul>
+        <ul class="ticks"><li>Replay any run on the map afterwards</li><li>Automatic steps all day, with week / month / year totals</li><li>Optional route suggestions: true loops (no dead-end alleys) and one-way runs — needs internet to plan</li></ul>
       </div>
       <figure class="phone"><img src="/assets/screens/live.png" alt="RepWise live run screen with a full-screen map and run interval banner" width="390" height="844"></figure>
     </article>
@@ -109,8 +167,8 @@
       <div class="feat-copy">
         <span class="tag">4 · Nutrition</span>
         <h3>Food logging that speaks Filipino</h3>
-        <p>Adobo, sinigang, tapsilog, kwek-kwek — over 50 local dishes and 130 ingredients with real portions. Can't find something? Add your own ingredient straight from its nutrition label, vitamins and minerals included.</p>
-        <ul class="ticks"><li>Custom ingredients and meals, saved for one-tap logging</li><li>Cooking method and oil change the calories</li><li>Intermittent fasting with your own eating window</li></ul>
+        <p>Adobo, sinigang, tapsilog, kwek-kwek — over 80 local dishes and 160 ingredients with real portions. Can't find something? Add your own ingredient straight from its nutrition label, vitamins and minerals included.</p>
+        <ul class="ticks"><li>Custom ingredients, dishes and meals, saved for one-tap logging</li><li>Cooking method and oil change the calories</li><li>Intermittent fasting with your own eating window</li></ul>
       </div>
       <figure class="phone"><img src="/assets/screens/ingredient.png" alt="RepWise custom ingredient form with calories, protein, carbs and fat" width="390" height="844"></figure>
     </article>
@@ -192,8 +250,8 @@
       <h2>Every set earns XP. Climb to Arnold.</h2>
       <p class="lede center">Each muscle — and your cardio — ranks up on its own. Iron is quick to leave; every tier after that is a longer climb. When you rank up, RepWise celebrates after your workout, not in the middle of it.</p>
       <ol class="ladder2"><li><img src="/assets/ranks/iron.png" alt="Iron" width="96" height="96"></li><li><img src="/assets/ranks/bronze.png" alt="Bronze" width="96" height="96"></li><li><img src="/assets/ranks/silver.png" alt="Silver" width="96" height="96"></li><li><img src="/assets/ranks/gold.png" alt="Gold" width="96" height="96"></li><li><img src="/assets/ranks/platinum.png" alt="Platinum" width="96" height="96"></li><li><img src="/assets/ranks/diamond.png" alt="Diamond" width="96" height="96"></li><li><img src="/assets/ranks/master.png" alt="Master" width="96" height="96"></li><li><img src="/assets/ranks/grandmaster.png" alt="Grandmaster" width="96" height="96"></li><li><img src="/assets/ranks/legend.png" alt="Legend" width="96" height="96"></li><li><img src="/assets/ranks/arnold.png" alt="Arnold" width="96" height="96"></li></ol>
-      <h3 class="muscles-h">11 ranks to climb at once</h3>
-      <ul class="muscles"><li><img src="/assets/muscles/chest.png" alt="Chest" width="88" height="88"></li><li><img src="/assets/muscles/back.png" alt="Back" width="88" height="88"></li><li><img src="/assets/muscles/shoulders.png" alt="Shoulders" width="88" height="88"></li><li><img src="/assets/muscles/biceps.png" alt="Biceps" width="88" height="88"></li><li><img src="/assets/muscles/triceps.png" alt="Triceps" width="88" height="88"></li><li><img src="/assets/muscles/quads.png" alt="Quads" width="88" height="88"></li><li><img src="/assets/muscles/hamstrings.png" alt="Hamstrings" width="88" height="88"></li><li><img src="/assets/muscles/glutes.png" alt="Glutes" width="88" height="88"></li><li><img src="/assets/muscles/calves.png" alt="Calves" width="88" height="88"></li><li><img src="/assets/muscles/core.png" alt="Core" width="88" height="88"></li><li><img src="/assets/muscles/cardio.png" alt="Cardio" width="88" height="88"></li></ul>
+      <h3 class="muscles-h">12 ranks to climb at once</h3>
+      <ul class="muscles"><li><img src="/assets/muscles/chest.png" alt="Chest" width="88" height="88"></li><li><img src="/assets/muscles/back.png" alt="Back" width="88" height="88"></li><li><img src="/assets/muscles/shoulders.png" alt="Shoulders" width="88" height="88"></li><li><img src="/assets/muscles/biceps.png" alt="Biceps" width="88" height="88"></li><li><img src="/assets/muscles/triceps.png" alt="Triceps" width="88" height="88"></li><li><img src="/assets/muscles/forearms.png" alt="Forearms" width="88" height="88"></li><li><img src="/assets/muscles/quads.png" alt="Quads" width="88" height="88"></li><li><img src="/assets/muscles/hamstrings.png" alt="Hamstrings" width="88" height="88"></li><li><img src="/assets/muscles/glutes.png" alt="Glutes" width="88" height="88"></li><li><img src="/assets/muscles/calves.png" alt="Calves" width="88" height="88"></li><li><img src="/assets/muscles/core.png" alt="Core" width="88" height="88"></li><li><img src="/assets/muscles/cardio.png" alt="Cardio" width="88" height="88"></li></ul>
       <p class="lede center small">Long-term quests — your first pull-up, a 5 km run — pay out thousands of XP.</p>
     </div>
   </section>

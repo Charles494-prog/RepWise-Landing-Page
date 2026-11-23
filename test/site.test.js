@@ -132,3 +132,13 @@ test('mobile: no fixed widths wider than a phone outside media queries (clipped 
   const top = css.replace(/@media[^{]+\{(?:[^{}]*\{[^{}]*\})*[^{}]*\}/g, '').replace(/[^{}]*\{[^}]*position:absolute[^}]*\}/g, '');
   assert.deepEqual(all(/(?:^|[;{])\s*(?:width|min-width):\s*(\d{3,})px/g, top).map(Number).filter(n => n > 390), []);
 });
+
+test('new features are highlighted: menu link, "New in RepWise" cards linking to their sections, screenshots', () => {
+  assert.match(html, /<a href="#new">New<\/a>/);
+  const sec = html.slice(html.indexOf('id="new"'), html.indexOf('<!-- FEATURES -->'));
+  for (const s of ['Smart rescheduling', 'Muscle balance', 'Custom exercises', 'Exercise groups', 'Dishes &amp; meals', 'Real loop routes']) assert.ok(sec.includes(`<h3>${s}</h3>`), s);
+  assert.ok(html.indexOf('id="new"') < html.indexOf('id="features"'));
+  for (const id of ['f-reschedule', 'f-balance', 'f-custom', 'f-meals']) assert.ok(html.includes(`id="${id}"`), id);
+  for (const img of ['reschedule', 'swap', 'balance', 'exercise', 'meal', 'nutrition']) assert.ok(html.includes(`/assets/screens/${img}.png`), img);
+  assert.ok(html.includes('alt="Forearms"')); assert.match(html, /12 ranks to climb at once/);
+});
