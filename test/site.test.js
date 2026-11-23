@@ -146,3 +146,16 @@ test('new features are highlighted: menu link, "New in RepWise" cards linking to
   for (const id of ['f-focus', 'f-ultra', 'f-fasting', 'f-themes']) { assert.ok(html.includes(`id="${id}"`), id); assert.ok(sec.includes(`href="#${id}"`), id); }
   for (const img of ['focus', 'ultra', 'ultra-nutrition', 'ultra-fast', 'themes', 'rank-gallery']) assert.ok(html.includes(`/assets/screens/${img}.png`), img);
 });
+
+test('Ultra-Health Mode is highlighted: menu link, hero pill, spotlight section above What\'s new, first New card, disclaimer', () => {
+  assert.match(html, /<a href="#ultra">Ultra-Health<\/a>/);
+  assert.match(html, /class="hero-pill" href="#ultra"/);
+  const at = html.indexOf('id="ultra"');
+  assert.ok(at > 0 && at < html.indexOf('id="new"'), 'spotlight sits above What\'s new');
+  const sec = html.slice(at, html.indexOf('<!-- WHAT\'S NEW -->'));
+  for (const s of ['A hard added-sugar cap', 'Sodium for every food', 'Limits from your readings', 'Smarter fasting', 'Bedtime-aware']) assert.ok(sec.includes(`<h3>${s}</h3>`), s);
+  assert.match(sec, /not medical advice/); assert.match(sec, /Settings → Modes &amp; features → Ultra-Health Mode/);
+  for (const img of ['ultra', 'ultra-fast']) assert.ok(sec.includes(`/assets/screens/${img}.png`), img);
+  const grid = html.slice(html.indexOf('class="new-grid"'));
+  assert.ok(grid.indexOf('href="#f-ultra"') < grid.indexOf('href="#f-focus"'), 'Ultra-Health is the first New card');
+});
